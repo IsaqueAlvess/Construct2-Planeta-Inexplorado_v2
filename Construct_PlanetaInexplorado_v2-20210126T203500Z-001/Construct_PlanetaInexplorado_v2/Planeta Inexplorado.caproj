@@ -1,0 +1,318 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>Planeta Inexplorado</name>
+    <description></description>
+    <version>1.0.0.0</version>
+    <author></author>
+    <author-email></author-email>
+    <author-website>http://</author-website>
+    <app-id>com.mycompany.myapp</app-id>
+    <unique-id>w9vpkqejcump</unique-id>
+    <saved-with-version>27900</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
+        <plugin author="Scirra" id="Tilemap" version="1">Tilemap</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
+        <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
+        <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
+        <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
+        <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
+        <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
+        <behavior author="Scirra" id="solid" version="1">Solid</behavior>
+    </used-behaviors>
+    <used-effects />
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>820</width>
+        <height>480</height>
+    </window-size>
+    <pixel-rounding>0</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">Yes</prop>
+        <prop name="Downscaling">Medium quality</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
+        <prop name="Loader style">Construct 2 splash</prop>
+        <prop name="Orientations">Any</prop>
+        <prop name="Pause on unfocus">No</prop>
+        <prop name="Physics engine">Box2D asm.js</prop>
+        <prop name="Preload sounds">Yes</prop>
+        <prop name="Preview browser">(default)</prop>
+        <prop name="Sampling">Linear</prop>
+        <prop name="Use high-DPI display">Yes</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-type name="Cenario" sid="270542236888678">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\ericv\Downloads\Cenário1.jpg" />
+        </object-type>
+        <object-type name="MapaDaLua" sid="518540871549595">
+            <plugin id="Tilemap" />
+            <behaviors>
+                <behavior-type name="Solid" sid="937833975308575">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <texture original-source="C:\Users\ericv\Downloads\Construct 2\BG\TilesMoon.png" />
+            <tiles />
+        </object-type>
+        <object-type name="Astronauta" sid="910435747567165">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="olhandoDireita" sid="977109762729529" type="boolean" />
+                <instance-variable name="vida" sid="453614350238835" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Platform" sid="541672635476724">
+                    <behavior id="Platform" />
+                </behavior-type>
+                <behavior-type name="ScrollTo" sid="798543410006988">
+                    <behavior id="scrollto" />
+                </behavior-type>
+                <behavior-type name="BoundToLayout" sid="343354467269826">
+                    <behavior id="bound" />
+                </behavior-type>
+                <behavior-type name="Flash" sid="137342574593032">
+                    <behavior id="Flash" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="parado" pingpong="0" repeatcount="1" repeatto="0" sid="158238602733879" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.512195" original-source="C:\Users\ericv\Downloads\Construct 2\Personagem\parado.png">
+                        <collision-poly>
+                            <point x="0.25" y="0.121951" />
+                            <point x="0.5" y="0.0243902" />
+                            <point x="0.8" y="0.097561" />
+                            <point x="0.85" y="0.487805" />
+                            <point x="0.95" y="0.97561" />
+                            <point x="0.5" y="0.829268" />
+                            <point x="0.3" y="0.853659" />
+                            <point x="0.05" y="0.487805" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="4" loop="0" name="correndo" pingpong="0" repeatcount="1" repeatto="0" sid="610657793349544" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\ericv\Downloads\Construct 2\Personagem\correndo1.png">
+                        <collision-poly>
+                            <point x="0.266667" y="0.222222" />
+                            <point x="0.5" y="0.0277778" />
+                            <point x="0.766667" y="0.194444" />
+                            <point x="0.9" y="0.5" />
+                            <point x="0.566667" y="0.638889" />
+                            <point x="0.5" y="0.972222" />
+                            <point x="0.1" y="0.916667" />
+                            <point x="0.1" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.52381" hotspotY="0.5" original-source="C:\Users\ericv\Downloads\Construct 2\Personagem\correndo2.png">
+                        <collision-poly>
+                            <point x="0.285714" y="0.166667" />
+                            <point x="0.47619" y="0.0277778" />
+                            <point x="0.809524" y="0.111111" />
+                            <point x="0.761905" y="0.5" />
+                            <point x="0.571429" y="0.75" />
+                            <point x="0.47619" y="0.833333" />
+                            <point x="0.0952381" y="0.944444" />
+                            <point x="0.047619" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.513514" original-source="C:\Users\ericv\Downloads\Construct 2\Personagem\correndo3.png">
+                        <collision-poly>
+                            <point x="0.333333" y="0.216216" />
+                            <point x="0.5" y="0.0540541" />
+                            <point x="0.833333" y="0.108108" />
+                            <point x="0.791667" y="0.486486" />
+                            <point x="0.666667" y="0.783784" />
+                            <point x="0.5" y="0.972973" />
+                            <point x="0.0833333" y="0.945946" />
+                            <point x="0.0833333" y="0.486486" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.52381" hotspotY="0.5" original-source="C:\Users\ericv\Downloads\Construct 2\Personagem\correndo4.png">
+                        <collision-poly>
+                            <point x="0.285714" y="0.166667" />
+                            <point x="0.47619" y="0.0277778" />
+                            <point x="0.809524" y="0.111111" />
+                            <point x="0.761905" y="0.5" />
+                            <point x="0.571429" y="0.75" />
+                            <point x="0.47619" y="0.833333" />
+                            <point x="0.0952381" y="0.944444" />
+                            <point x="0.047619" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="pulando" pingpong="0" repeatcount="1" repeatto="0" sid="758314510891671" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.512821" original-source="C:\Users\ericv\Downloads\Construct 2\Personagem\pulando.png">
+                        <collision-poly>
+                            <point x="0.333333" y="0.307692" />
+                            <point x="0.5" y="0.0512821" />
+                            <point x="0.805556" y="0.179487" />
+                            <point x="0.944444" y="0.487179" />
+                            <point x="0.805556" y="0.820513" />
+                            <point x="0.5" y="0.974359" />
+                            <point x="0.305556" y="0.717949" />
+                            <point x="0.0555556" y="0.487179" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="caindo" pingpong="0" repeatcount="1" repeatto="0" sid="458732636489038" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.511628" original-source="C:\Users\ericv\Downloads\Construct 2\Personagem\caindo.png">
+                        <collision-poly>
+                            <point x="0.333333" y="0.27907" />
+                            <point x="0.5" y="0.0465116" />
+                            <point x="0.805556" y="0.162791" />
+                            <point x="0.972222" y="0.488372" />
+                            <point x="0.75" y="0.790698" />
+                            <point x="0.5" y="0.813953" />
+                            <point x="0.333333" y="0.72093" />
+                            <point x="0.0277778" y="0.488372" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Keyboard" sid="177765820105785">
+            <plugin id="Keyboard" />
+        </object-type>
+        <object-type name="Audio" sid="691468511259714">
+            <plugin id="Audio" />
+        </object-type>
+        <object-type name="Tiro" sid="329109232743889">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="616531296253103">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="881910011984282" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\ericv\Downloads\Construct 2\Personagem\Tiro\Tiro.png">
+                        <collision-poly>
+                            <point x="0.5" y="0" />
+                            <point x="1" y="0.5" />
+                            <point x="0.5" y="1" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="chão" sid="746470695726950">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="469401597033703">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="615275696950462" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="vida" sid="179529024357257">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\Alunos\Downloads\vida.png.png" />
+        </object-type>
+        <object-type name="Sprite" sid="815068897476345">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="posição" sid="490245079332271" type="number" />
+                <instance-variable name="vida" sid="191376530440529" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Sine" sid="405576569531111">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="197365269204800" speed="5">
+                    <frame duration="1" hotspotX="0.515152" hotspotY="0.5" original-source="C:\Users\Alunos\Downloads\inimigo1.png">
+                        <collision-poly>
+                            <point x="0.151515" y="0.147059" />
+                            <point x="0.484848" y="0" />
+                            <point x="0.848485" y="0.147059" />
+                            <point x="1" y="0.5" />
+                            <point x="0.848485" y="0.852941" />
+                            <point x="0.484848" y="1" />
+                            <point x="0.151515" y="0.852941" />
+                            <point x="0.030303" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite2" sid="997604110496852">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="733153971541286" speed="5">
+                    <frame duration="1" hotspotX="0.515152" hotspotY="0.5" original-source="C:\Users\Ctrl Play\Downloads\Construct_PlanetaInexplorado_v2-20210126T203500Z-001\Construct_PlanetaInexplorado_v2\Animations\Sprite\Default\000.png">
+                        <collision-poly>
+                            <point x="0.151515" y="0.147059" />
+                            <point x="0.484848" y="0" />
+                            <point x="0.848485" y="0.147059" />
+                            <point x="1" y="0.5" />
+                            <point x="0.848485" y="0.852941" />
+                            <point x="0.484848" y="1" />
+                            <point x="0.151515" y="0.852941" />
+                            <point x="0.030303" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+    </object-folder>
+    <families />
+    <layout-folder>
+        <layout>Layout 1.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-sheet>Event sheet 1.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="Keyboard" uid="3" />
+        <global-instance type="Audio" uid="4">
+            <properties>
+                <timescale-audio>Off</timescale-audio>
+                <saveload>All</saveload>
+                <play-in-background>No</play-in-background>
+                <positioned-audio></positioned-audio>
+                <panning-model>HRTF</panning-model>
+                <distance-model>Inverse</distance-model>
+                <listener-z-height>600</listener-z-height>
+                <reference-distance>600</reference-distance>
+                <maximum-distance>10000</maximum-distance>
+                <roll-off-factor>1</roll-off-factor>
+            </properties>
+        </global-instance>
+    </global-instances>
+    <sounds-folder>
+        <file name="boom2.ogg" />
+        <file name="FimDeJogo.ogg" />
+        <file name="Gameloop.ogg" />
+        <file name="laser.ogg" />
+        <file name="pulo.ogg" />
+        <file name="space theme game loop.ogg" />
+    </sounds-folder>
+    <music-folder />
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+    </files-folder>
+</c2project>

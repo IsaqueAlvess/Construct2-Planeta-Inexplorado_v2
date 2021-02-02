@@ -1,0 +1,225 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet 1</name>
+    <events>
+        <event-block sid="379337226971235">
+            <conditions>
+                <condition id="2" name="Key is down" sid="680200918020529" type="Keyboard">
+                    <param id="0" name="Key">37</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Set mirrored" sid="616519958880476" type="Astronauta">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="4" name="Set animation" sid="186314215783028" type="Astronauta">
+                    <param id="0" name="Animation">&quot;correndo&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="610267896344485" type="Astronauta">
+                    <param id="0" name="Instance variable">olhandoDireita</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="676574015412391">
+            <conditions>
+                <condition id="2" name="Key is down" sid="324975484958374" type="Keyboard">
+                    <param id="0" name="Key">39</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Set mirrored" sid="771543160891618" type="Astronauta">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="522706493580654" type="Astronauta">
+                    <param id="0" name="Animation">&quot;correndo&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="691852662337986">
+            <conditions>
+                <condition id="2" name="Key is down" sid="716783470503988" type="Keyboard">
+                    <param id="0" name="Key">38</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="686886302961588" type="Astronauta">
+                    <param id="0" name="Animation">&quot;pulando&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="0" name="Play" sid="877694620141776" type="Audio">
+                    <param id="0" name="Audio file">pulo</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="155917594763173">
+            <conditions>
+                <condition behavior="Platform" id="6" name="On fall" sid="718812554428121" type="Astronauta" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="522454342751942" type="Astronauta">
+                    <param id="0" name="Animation">&quot;caindo&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="727461196387117">
+            <conditions>
+                <condition behavior="Platform" id="7" name="On stopped" sid="890680418178010" type="Astronauta" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="783615730909099" type="Astronauta">
+                    <param id="0" name="Animation">&quot;parado&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="328811997988821">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="771882871055091" type="Keyboard">
+                    <param id="0" name="Key">32</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="834002661423599" type="Astronauta">
+                    <param id="0" name="Object">Tiro</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="0" name="Play" sid="295923495950844" type="Audio">
+                    <param id="0" name="Audio file">laser</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="-15" name="Set visible" sid="942610418724024" type="Tiro">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="351262100990578">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="587278405513300" type="System" />
+            </conditions>
+            <actions>
+                <action id="-5" name="Set width" sid="259425529319754" type="vida">
+                    <param id="0" name="Width">Astronauta.vida*32</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="658012459266331">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="361899373477828" type="Sprite">
+                    <param id="0" name="Instance variable">posição</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">65</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Set mirrored" sid="133098553943228" type="Sprite">
+                    <param id="0" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="406685708784520">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="173676315236780" type="Sprite">
+                    <param id="0" name="Instance variable">posição</param>
+                    <param id="1" name="Comparison">2</param>
+                    <param id="2" name="Value">-65</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Set mirrored" sid="323645789101870" type="Sprite">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="641678326092316">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="409178143066064" type="System" />
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="787340548700303" type="Sprite">
+                    <param id="0" name="Instance variable">posição</param>
+                    <param id="1" name="Value">Sprite.Sine.Value</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="807900187876555">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="738577434732348" type="Tiro">
+                    <param id="0" name="Object">Sprite</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Subtract from" sid="116530378490954" type="Sprite">
+                    <param id="0" name="Instance variable">vida</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block bookmark="1" sid="786802197755290">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="692805547592004" type="Astronauta">
+                    <param id="0" name="Object">Sprite</param>
+                </condition>
+                <condition behavior="Flash" id="0" inverted="1" name="Is flashing" sid="224399304687818" type="Astronauta" />
+            </conditions>
+            <actions>
+                <action id="-12" name="Subtract from" sid="446125389834305" type="Astronauta">
+                    <param id="0" name="Instance variable">vida</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-5" name="Set width" sid="292601989657690" type="vida">
+                    <param id="0" name="Width">Astronauta.vida*32</param>
+                </action>
+                <action behavior="Flash" id="0" name="Flash" sid="901665529479305" type="Astronauta">
+                    <param id="0" name="&apos;On&apos; time">0.1</param>
+                    <param id="1" name="&apos;Off&apos; time">0.1</param>
+                    <param id="2" name="Duration">3.0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="809716632413691">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="398309490831383" type="Astronauta">
+                    <param id="0" name="Instance variable">vida</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="761063654033943" type="Audio">
+                    <param id="0" name="Audio file">FimDeJogo</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;gameOver&quot;</param>
+                </action>
+                <action id="-9" name="Destroy" sid="253274291891122" type="Astronauta" />
+                <action id="-16" name="Wait" sid="939779181227134" type="System">
+                    <param id="0" name="Seconds">3</param>
+                </action>
+                <action id="-26" name="Restart layout" sid="749412007288035" type="System" />
+            </actions>
+        </event-block>
+        <event-block sid="507368467840777">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="585196480434699" type="Sprite">
+                    <param id="0" name="Instance variable">vida</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="291188251725443" type="Sprite" />
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
